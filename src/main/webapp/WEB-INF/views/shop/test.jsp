@@ -127,18 +127,6 @@
 	
 	<a href="MemInsertForm">회원가입</a>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<!-- Trigger/Open The Modal -->
 		
 		<!-- The Modal -->
