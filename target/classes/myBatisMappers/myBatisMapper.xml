@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="productMapper">
+<insert id="insertOne" parameterType="prod">
+insert into t_product values(
+seq_product.nextval,
+null,
+#{name},
+#{largecategory},
+#{smallcategory},
+#{launchdate},
+#{expireddate},
+#{price},
+#{stock},
+#{from},
+#{delcharge},
+#{options},
+#{tn_sysname},
+#{tn_orgname},
+#{d_1_sysname},
+#{d_1_orgname},
+#{d_2_sysname, jdbcType=VARCHAR},
+#{d_2_orgname, jdbcType=VARCHAR},
+#{d_3_sysname, jdbcType=VARCHAR},
+#{d_3_orgname, jdbcType=VARCHAR},
+#{d_4_sysname, jdbcType=VARCHAR},
+#{d_4_orgname, jdbcType=VARCHAR},
+#{delinfo},
+#{delop},
+sysdate,
+#{text}
+)
+</insert>
+
+<select id="selectVege" resultType="prod">
+select * from t_product where largecategory='채소'
+</select>
+<select id="selectFruit" resultType="prod">
+select * from t_product where largecategory='과일'
+</select>
+<select id="selectGrain" resultType="prod">
+select * from t_product where largecategory='곡류'
+</select>
+<select id="selectMeat" resultType="prod">
+select * from t_product where largecategory='육류'
+</select>
+<select id="selectMarine" resultType="prod">
+select * from t_product where largecategory='수산물'
+</select>
+<select id="selectProcessed" resultType="prod">
+select * from t_product where largecategory='가공식품'
+</select>
+<select id="selectOne" parameterType="Integer" resultType="prod">
+select * from t_product where pronum=#{pronum}
+</select>
+
+</mapper>
