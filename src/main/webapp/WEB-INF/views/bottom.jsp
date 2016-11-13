@@ -8,6 +8,6 @@
 </head>
 <body>
 <h2>BOTTOM</h2>
-<a href="/spring/shop/test111">테스트</a>
+<a href="/spring/shop/test">테스트</a>
 </body>
 </html>
