@@ -138,7 +138,6 @@
 	
 	
 	
-	<a id="myBtn">로그인</a>
 	
 	<!-- Trigger/Open The Modal -->
 		
