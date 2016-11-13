@@ -4,7 +4,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="productMapper">
+<mapper namespace="Mapper">
 <insert id="insertOne" parameterType="prod">
 insert into t_product values(
 seq_product.nextval,
@@ -57,5 +57,13 @@ select * from t_product where largecategory='가공식품'
 <select id="selectOne" parameterType="Integer" resultType="prod">
 select * from t_product where pronum=#{pronum}
 </select>
+
+<insert parameterType="mem" id="memInsert"> insert into t_member values (#{id}, #{pw}, #{name}, #{sex}, #{birthday}, #{email}, #{address}, #{phone}, #{alarm}, sysdate, sysdate) </insert>
+
+<select parameterType="String" id="ZipcodeSelect" resultType="zipcode"> select * from t_zipcode where address like '%'||#{target}||'%' </select>
+
+<select parameterType="String" id="idckeck" resultType="mem"> select * from t_member where id = #{id} </select>
+
+<select parameterType="mem" id="login" resultType="mem"> select * from t_member where id= #{id} and pw=#{pw} </select>
 
 </mapper>
