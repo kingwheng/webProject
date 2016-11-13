@@ -29,7 +29,7 @@ public class shopController {
 	@Autowired
 	private productService service;
 
-	@RequestMapping(value = { "home", "insertForm","test" })
+	@RequestMapping(value = { "home", "insertForm","test111" })
 	public String go(ModelMap mmap, HttpServletRequest request) {
 		String svlPath = request.getServletPath();
 		String mainView = svlPath.replaceAll("/shop/", "");
