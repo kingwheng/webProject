@@ -8,6 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+<table border="1" style="text-align: center; border-collapse: collapse; width: 100%;">
+<tr>
+<td>
+<img src="/spring/resources/photos/${dto.tn_sysname }">
+</td>
+<td>
+이름 : ${dto.name}
+</td>
+</tr>
+
+
+
+</table>
 	tn
 	<img src="/spring/resources/photos/${dto.tn_sysname }">
 	<br> 이름 : ${dto.name}
